@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Source tutorial run functions
+. $WM_PROJECT_DIR/bin/tools/RunFunctions
+
+# Compile the library
+wmake -s libso oscillatoryShearIndex
+
+# Create the mesh
+runApplication blockMesh
+
+# Run the solver
+runApplication pisoFoam
